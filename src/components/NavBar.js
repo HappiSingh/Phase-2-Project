@@ -32,11 +32,11 @@ function NavBar() {
             >Home
             </NavLink>
           <NavLink
-            to="/goals"
+            to="/targets"
             exact
             style={linkStyles}
             activeStyle={activeStyle}
-            >Goals</NavLink>
+            >Targets</NavLink>
 
         <NavLink
             to="/accomplishments"

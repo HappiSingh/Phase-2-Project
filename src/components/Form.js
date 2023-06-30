@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function Form({ onFormSubmit }){
     const [formType, setFormType] = useState(true)
-    const [goalData, setGoalData] = useState({
+    const [targetData, setTargetData] = useState({
         name: "",
         progress: ""
     })
@@ -17,8 +17,8 @@ function Form({ onFormSubmit }){
 
     const handleChange = (e) => {
         if(formType){
-            setGoalData({
-                ...goalData,
+            setTargetData({
+                ...targetData,
                 [e.target.name]: e.target.value,
               })
         } else{
@@ -33,7 +33,7 @@ function Form({ onFormSubmit }){
         e.preventDefault()
 
         let type;
-        if(formType){ type = "goals"}
+        if(formType){ type = "targets"}
             else{ type = "accomplishments"}
 
         fetch(`http://localhost:4000/${type}`, {
@@ -42,26 +42,26 @@ function Form({ onFormSubmit }){
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify(formType ? goalData : accomplishmentData)
+            body: JSON.stringify(formType ? targetData : accomplishmentData)
             })
                 .then(res => res.json())
                 .then(newData => onFormSubmit(newData, type))
 
         formType ? 
-        setGoalData({name: "", progress: ""}) : 
+        setTargetData({name: "", progress: ""}) : 
         setAccomplishmentData({name: "", completed: ""})
     };
 
 
     return(
         <section id="form-section">
-            <h2>Add a new goal or an accomplishment:</h2>
+            <h2>Add a new target or an accomplishment:</h2>
             <form onSubmit={handleSubmit}>
                 <select 
                     name="form-type"
                     onChange={handleFormTypeChange}
                     >
-                    <option value="goal">Goal</option>
+                    <option value="target">Target</option>
                     <option value="accomplishment">Accomplishment</option>
                 </select>
                 <input 
@@ -70,7 +70,7 @@ function Form({ onFormSubmit }){
                     type="text"
                     placeholder="Description"
                     name="name"
-                    value={formType ? goalData.name : accomplishmentData.name}
+                    value={formType ? targetData.name : accomplishmentData.name}
                     />
                 
                 { 
@@ -82,7 +82,7 @@ function Form({ onFormSubmit }){
                         type="number"
                         placeholder="0"
                         name="progress"
-                        value={goalData.progress}
+                        value={targetData.progress}
                         />
                     </label> : 
                     <label>Completion Date:

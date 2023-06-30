@@ -48,7 +48,7 @@ h2 {
   color: #00D4FF;
 }
 
-#goals-container, #accomplishments-container {
+#targets-container, #accomplishments-container {
   display: flex;
     flex-wrap: wrap;
     margin: 50px 25px;
@@ -67,7 +67,7 @@ h2 {
   background-color: #433d8c;
 }
 
-#goals-container .card {
+#targets-container .card {
   background-color: #0A2540;
 }
 
@@ -84,7 +84,7 @@ h2 {
   align-content: flex-end;
 }
 
-#goals-container .card .delete-button {
+#targets-container .card .delete-button {
   background-color: #7A73FE;
 }
 

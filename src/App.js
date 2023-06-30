@@ -2,20 +2,20 @@ import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
 
-import Goals from "./components/Goals";
+import Targets from "./components/Targets";
 import Accomplishments from "./components/Accomplishments";
 import Home from "./components/Home";
 import Form from "./components/Form";
 import NavBar from "./components/NavBar";
 
 function App() {
-  const [goals, setGoals] = useState([]);
+  const [targets, setTargets] = useState([]);
   const [accomplishments, setAccomplishments] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/goals`)
+    fetch(`http://localhost:4000/targets`)
       .then(res => res.json())
-      .then(setGoals);
+      .then(setTargets);
   }, []);
 
   useEffect(() => {
@@ -24,19 +24,19 @@ function App() {
       .then(setAccomplishments);
   }, []);
 
-  const onUpdateGoal = (updatedGoal) => {
-    const updatedGoals = goals.map(originalGoal => {
-      if(originalGoal.id === updatedGoal.id){
-        return updatedGoal;
+  const onUpdateTarget = (updatedTarget) => {
+    const updatedTargets = targets.map(originalTarget => {
+      if(originalTarget.id === updatedTarget.id){
+        return updatedTarget;
       } else{
-        return originalGoal;
+        return originalTarget;
       }
     });
-    console.log(updatedGoals);
+    console.log(updatedTargets);
   }
 
   const onFormSubmit = (newData, type) => {
-      type === 'goals' ? setGoals(goals => [...goals, newData]) : setAccomplishments(accomplishments => [...accomplishments, newData])
+      type === 'targets' ? setTargets(targets => [...targets, newData]) : setAccomplishments(accomplishments => [...accomplishments, newData])
   }
 
   const onDeleteClick = (id, type) => {
@@ -44,10 +44,10 @@ function App() {
       method: 'DELETE'
     })
     
-    //Use filter to setGoal or setAccomplishments with new items
-      if(type === 'goals'){
-        setGoals(ogGoals => ogGoals.filter(ogGoal => {
-          return ogGoal.id === id ? null : ogGoal;
+    
+      if(type === 'targets'){
+        setTargets(ogTargets => ogTargets.filter(ogTarget => {
+          return ogTarget.id === id ? null : ogTarget;
         }))
       } else{
         setAccomplishments(ogAccomplishments => ogAccomplishments.filter(ogAccomplishment => {
@@ -64,8 +64,8 @@ function App() {
       <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/goals">
-          <Goals goals={goals} onUpdateGoal={onUpdateGoal} onDeleteClick={onDeleteClick}/>
+        <Route path="/targets">
+          <Targets targets={targets} onUpdateTarget={onUpdateTarget} onDeleteClick={onDeleteClick}/>
         </Route>
         <Route path="/accomplishments">
           <Accomplishments accomplishments={accomplishments} onDeleteClick={onDeleteClick}/>
