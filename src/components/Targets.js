@@ -2,15 +2,15 @@ import React from "react";
 import TargetItem from "./TargetItem";
 
 function Targets({ targets, onUpdateTarget, onDeleteClick }){
-
+// mapping and sending props data to child component 
     const renderTargets = targets.map(target => {
-        return(
+        return (
             <TargetItem 
                 key={target.id} 
                 target={target} 
                 onUpdateTarget={onUpdateTarget}
                 onDeleteClick={onDeleteClick}
-                />
+            />
         )
     })
 
