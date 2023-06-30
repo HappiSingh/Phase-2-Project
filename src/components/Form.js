@@ -84,21 +84,23 @@ function Form({ onFormSubmit }){
                 { 
 
                 // checking the form type to display either percentage field or date field
-                formType ?
+                formType 
+                ?
                     <label> Percent Completed
                         <input 
                         onChange={handleChange}
                         type="number"
-                        placeholder="0"
+                        placeholder="0%"
                         name="progress"
                         value={targetData.progress}
                         />
-                    </label> : 
+                    </label> 
+                : 
                     <label>Completion Date:
                         <input 
                         onChange={handleChange}
                         type="text"
-                        placeholder="Ex. May 2020"
+                        placeholder="Month Year"
                         name="completed"
                         value={triumphData.completed}
                         />
