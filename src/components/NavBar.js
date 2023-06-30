@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
 
+  // The look of the nav-bar buttons
   const linkStyles = {
     color: "#00D4FF",
     padding: "10px 20px",
@@ -12,6 +13,7 @@ function NavBar() {
     borderRadius: "10px"
   };
 
+  // The animation of the nav-bar buttons
   const activeStyle = {
     border: "solid #00D4FF 2px",
     fontWeight: "bold"
@@ -20,7 +22,7 @@ function NavBar() {
     return(
         <div id="nav-bar">
           <h1 className="site-title">
-              VISION+BOARD
+              Targets & Triumphs
           </h1>
           <NavLink
             to="/"
