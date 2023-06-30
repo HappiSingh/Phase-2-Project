@@ -19,34 +19,39 @@ function NavBar() {
     fontWeight: "bold"
   };
 
-    return(
-        <div id="nav-bar">
-          <h1 className="site-title">
+  // routing to the different component pages
+    return (
+      <div id="nav-bar">
+        <h1 className="site-title">
               Targets & Triumphs
-          </h1>
-          <NavLink
+        </h1>
+
+        <NavLink
             to="/"
-            /* set "exact" so it knows to only set activeStyle when route is deeply equal to link */
             exact
             style={linkStyles}
-            /* add prop for activeStyle */
             activeStyle={activeStyle}
-            >Home
-            </NavLink>
-          <NavLink
+        >
+          Home
+        </NavLink>
+        <NavLink
             to="/targets"
             exact
             style={linkStyles}
             activeStyle={activeStyle}
-            >Targets</NavLink>
+        >
+          Targets
+        </NavLink>
 
         <NavLink
             to="/triumphs"
             exact
             style={linkStyles}
             activeStyle={activeStyle}
-            >Triumphs</NavLink>
-        </div>
+        >
+          Triumphs
+        </NavLink>
+      </div>
     );
 }
 

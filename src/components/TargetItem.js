@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 
 function TargetItem({ target, onUpdateTarget, onDeleteClick }) {
+    // destructuring props
     const {id, name, progress} = target;
     const [progressBar, setProgressBar] = useState(progress);
 
-
+    // patches changes made to the progress bar
     const handleChange = (e) => {
         setProgressBar(parseInt(e.target.value))
         fetch(`http://localhost:4000/targets/${id}`, {
@@ -21,12 +22,13 @@ function TargetItem({ target, onUpdateTarget, onDeleteClick }) {
             })
     }
 
+    // handles delete event
     const handleDelete = () => {
         let type = "targets";
         onDeleteClick(id, type)
     }
 
-    return(
+    return (
         <div className="card">
             <button onClick={handleDelete} className="delete-button">✕</button>
             <p><b className="label">Target:</b> {name}</p>
