@@ -1,36 +1,38 @@
 {
   "targets": [
     {
-      "id": 2,
+      "id": 1,
       "name": "Finish suit shopping for wedding",
       "progress": 80
     },
     {
+      "id": 2,
       "name": "Complete Flatiron Phase 2 Video Walkthrough",
-      "progress": 50,
-      "id": 4
+      "progress": 50
     },
     {
+      "id": 3,
       "name": "Become a Software Engineer",
-      "progress": 50,
-      "id": 5
+      "progress": 50
     }
   ],
   "triumphs": [
     {
-      "id": 1,
+      "id": 4,
       "name": "Sell First Company: Epiforce, Inc.",
       "completed": "July 2016"
     },
     {
+      "id": 5,
       "name": "Get a Job with Pfizer out of College",
-      "completed": "March 2020",
-      "id": 4
+      "completed": "March 2020"
+      
     },
     {
+      "id": 6,
       "name": "New Accomplishment",
-      "completed": "June 2013",
-      "id": 5
+      "completed": "June 2013"
+      
     }
   ]
 }
