@@ -48,19 +48,18 @@ function App() {
       : setTriumphs(triumphs => [...triumphs, newData])
   }
 
+  // deleting data from db is X is clicked 
   const onDeleteClick = (id, type) => {
     fetch(`http://localhost:4000/${type}/${id}`, {
       method: 'DELETE'
     })
-    
-    
       if(type === 'targets'){
-        setTargets(ogTargets => ogTargets.filter(ogTarget => {
-          return ogTarget.id === id ? null : ogTarget;
+        setTargets(orgTargets => orgTargets.filter(orgTarget => {
+          return orgTarget.id === id ? null : orgTarget;
         }))
       } else{
-        setTriumphs(ogTriumphs => ogTriumphs.filter(ogTriumphs => {
-          return ogTriumphs.id === id ? null : ogTriumphs;
+        setTriumphs(orgTriumphs => orgTriumphs.filter(orgTriumphs => {
+          return orgTriumphs.id === id ? null : orgTriumphs;
         }))
       }
   }
