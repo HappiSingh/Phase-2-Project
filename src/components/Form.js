@@ -37,7 +37,7 @@ function Form({ onFormSubmit }){
     const handleSubmit = (e) => {
         e.preventDefault()
 
-    // checking dropdown type
+        // checking dropdown type
         let type;
         if (formType) { type = "targets"}
             else { type = "triumphs"}
@@ -55,38 +55,38 @@ function Form({ onFormSubmit }){
                 .then(res => res.json())
                 .then(newData => onFormSubmit(newData, type))
 
-    // clearing the input fields after submit
+        // clearing the input fields after submit
         formType 
         ? setTargetData({name: "", progress: ""}) 
         : setTriumphData({name: "", completed: ""})
     };
 
-
+    // displaying the form and options
     return(
         <section id="form-section">
-            <h2>Add a new target or a triumph:</h2>
+        <h2>Enter a new Target you've set for yourself or Add to your Triumphs:</h2>
             <form onSubmit={handleSubmit}>
                 <select 
                     name="form-type"
-                    onChange={handleFormTypeChange}
-                    >
-                    <option value="target">Target</option>
-                    <option value="triumph">Triumph</option>
+                    onChange={handleFormTypeChange}>
+                        <option value="target">Target</option>
+                        <option value="triumph">Triumph</option>
                 </select>
                 <input 
                     onChange={handleChange}
                     className="description"
                     type="text"
-                    placeholder="Description"
+                    placeholder="Description..."
                     name="name"
                     value={formType ? targetData.name : triumphData.name}
-                    />
+                />
                 
                 { 
-                // Ternary operator to determine which kind of form we are completing, based off of the dropdown selection.
+
+                // checking the form type to display either percentage field or date field
                 formType ?
-                    <label>% Complete
-                    <input 
+                    <label> Percent Completed
+                        <input 
                         onChange={handleChange}
                         type="number"
                         placeholder="0"
@@ -95,7 +95,7 @@ function Form({ onFormSubmit }){
                         />
                     </label> : 
                     <label>Completion Date:
-                    <input 
+                        <input 
                         onChange={handleChange}
                         type="text"
                         placeholder="Ex. May 2020"
