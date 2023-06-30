@@ -2,13 +2,19 @@ import React from "react";
 
 function Home(){
     return(
+        
         <div id="home-container">
-            <h3>Flatiron School Phase 2 Project</h3>
-            <p>Just a simple target board app created with React...</p>
-            {'\n'}
-            <p id="author">By Win Feigle -- <a href="https://www.linkedin.com/in/edwinfeigle/">LinkedIn</a></p>
+            <h3>Welcome to my Phase 2 Project</h3>
+            <p>This is a place where you can set your Targets and remember your Triumphs.</p>
             
+            
+            
+
+            <footer id="footer">
+                Copyright &copy; 2023 Harpreet Singh
+            </footer>
         </div>
+       
     );
 }
 

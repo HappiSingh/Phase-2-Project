@@ -49,7 +49,7 @@ function Form({ onFormSubmit }){
 
         formType ? 
         setTargetData({name: "", progress: ""}) : 
-        setTriumphsData({name: "", completed: ""})
+        setTriumphData({name: "", completed: ""})
     };
 
 

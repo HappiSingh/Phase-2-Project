@@ -10,6 +10,7 @@ body {
   background-color: #0D2E4E;
   color: white;
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -36,24 +37,25 @@ h2 {
 
 #home-container {
   margin: 80px 50px;
-  width: 50%;
+  padding: 20px;
+  text-align: center;
 }
 
-#home-container p{
+#home-container p {
   opacity: 75%;
 }
 
-#home-container #author a{
+#home-container #footer{
   font-weight: bold;
   color: #00D4FF;
 }
 
 #targets-container, #triumphs-container {
-  display: flex;
+    display: flex;
     flex-wrap: wrap;
     margin: 50px 25px;
-    max-width: 75%;
-    justify-content: left;
+    /* max-width: 75%; */
+    justify-content: center;
 }
 
 .card {
