@@ -2,37 +2,51 @@
   "targets": [
     {
       "id": 1,
-      "name": "Finish suit shopping for wedding",
-      "progress": 80
+      "name": "Graduate Flatiron Bootcamp",
+      "progress": 50
     },
     {
       "id": 2,
-      "name": "Complete Flatiron Phase 2 Video Walkthrough",
-      "progress": 50
+      "name": "Build my first gaming/productivity PC",
+      "progress": 70
     },
     {
       "id": 3,
-      "name": "Become a Software Engineer",
-      "progress": 50
+      "name": "Lose 35 lbs",
+      "progress": 20
+    },
+    {
+      "id": 4,
+      "name": "Have an AWS Cloud Certification",
+      "progress": 40
     }
   ],
+
   "triumphs": [
     {
       "id": 4,
-      "name": "Sell First Company: Epiforce, Inc.",
-      "completed": "July 2016"
+      "name": "Travelled to 3 states in India",
+      "completed": "January 2015"
     },
     {
       "id": 5,
-      "name": "Get a Job with Pfizer out of College",
-      "completed": "March 2020"
-      
+      "name": "Earned a Certification in Data Analytics",
+      "completed": "December 2021"
     },
     {
       "id": 6,
-      "name": "New Accomplishment",
-      "completed": "June 2013"
-      
+      "name": "Paid off Credit Card Debt",
+      "completed": "March 2023"
+    },
+    {
+      "id": 7,
+      "name": "Bought a house in NJ",
+      "completed": "September 2018"
+    },
+    {
+      "id": 8,
+      "name": "Got a job in Amazon",
+      "completed": "August 2019"
     }
   ]
 }
