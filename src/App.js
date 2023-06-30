@@ -1,6 +1,6 @@
+// Imports for the routing, state handling, data handling, and components
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
-
 
 import Targets from "./components/Targets";
 import Triumphs from "./components/Triumphs";
