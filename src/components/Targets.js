@@ -7,7 +7,7 @@ function Targets({ targets, onUpdateTarget, onDeleteClick }){
         return(
             <TargetItem 
                 key={target.id} 
-                gtarget={target} 
+                target={target} 
                 onUpdateTarget={onUpdateTarget}
                 onDeleteClick={onDeleteClick}
                 />
