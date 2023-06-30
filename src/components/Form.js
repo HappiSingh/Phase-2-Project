@@ -1,6 +1,8 @@
+
 import React, { useState } from "react";
 
 function Form({ onFormSubmit }){
+    // 3 states added to store default form information
     const [formType, setFormType] = useState(true)
     const [targetData, setTargetData] = useState({
         name: "",
@@ -11,10 +13,12 @@ function Form({ onFormSubmit }){
         completed: ""
     })
 
+    // checks the selected form type (dropdown)
     const handleFormTypeChange = () => {
         setFormType(!formType);
     }
 
+    // true means targets data / false means triumphs data
     const handleChange = (e) => {
         if(formType){
             setTargetData({
@@ -29,12 +33,14 @@ function Form({ onFormSubmit }){
         };
     };
 
+    // submitting entered date to db and setting the new state
     const handleSubmit = (e) => {
         e.preventDefault()
 
+    // checking dropdown type
         let type;
-        if(formType){ type = "targets"}
-            else{ type = "triumphs"}
+        if (formType) { type = "targets"}
+            else { type = "triumphs"}
 
         fetch(`http://localhost:4000/${type}`, {
             method: 'POST',
@@ -42,14 +48,17 @@ function Form({ onFormSubmit }){
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify(formType ? targetData : triumphData)
+            body: JSON.stringify(formType 
+                ? targetData 
+                : triumphData)
             })
                 .then(res => res.json())
                 .then(newData => onFormSubmit(newData, type))
 
-        formType ? 
-        setTargetData({name: "", progress: ""}) : 
-        setTriumphData({name: "", completed: ""})
+    // clearing the input fields after submit
+        formType 
+        ? setTargetData({name: "", progress: ""}) 
+        : setTriumphData({name: "", completed: ""})
     };
 
 
