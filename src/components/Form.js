@@ -64,7 +64,7 @@ function Form({ onFormSubmit }){
     // displaying the form and options
     return(
         <section id="form-section">
-        <h2>Enter a new Target you've set for yourself or Add to your Triumphs:</h2>
+        <h2>Enter a new Target you've set for yourself or add to your Triumphs!</h2>
             <form onSubmit={handleSubmit}>
                 <select 
                     name="form-type"
@@ -86,7 +86,7 @@ function Form({ onFormSubmit }){
                 // checking the form type to display either percentage field or date field
                 formType 
                 ?
-                    <label> Percent Completed
+                    <label> Percent Completed:
                         <input 
                         onChange={handleChange}
                         type="number"
@@ -96,7 +96,7 @@ function Form({ onFormSubmit }){
                         />
                     </label> 
                 : 
-                    <label>Completion Date:
+                    <label> Date Completed:
                         <input 
                         onChange={handleChange}
                         type="text"
