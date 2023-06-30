@@ -3,14 +3,14 @@ import { Route, Switch } from "react-router-dom";
 
 
 import Targets from "./components/Targets";
-import Accomplishments from "./components/Accomplishments";
+import Triumphs from "./components/Triumphs";
 import Home from "./components/Home";
 import Form from "./components/Form";
 import NavBar from "./components/NavBar";
 
 function App() {
   const [targets, setTargets] = useState([]);
-  const [accomplishments, setAccomplishments] = useState([]);
+  const [triumphs, setTriumphs] = useState([]);
 
   useEffect(() => {
     fetch(`http://localhost:4000/targets`)
@@ -19,9 +19,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/accomplishments`)
+    fetch(`http://localhost:4000/triumphs`)
       .then(res => res.json())
-      .then(setAccomplishments);
+      .then(setTriumphs);
   }, []);
 
   const onUpdateTarget = (updatedTarget) => {
@@ -36,7 +36,7 @@ function App() {
   }
 
   const onFormSubmit = (newData, type) => {
-      type === 'targets' ? setTargets(targets => [...targets, newData]) : setAccomplishments(accomplishments => [...accomplishments, newData])
+      type === 'targets' ? setTargets(targets => [...targets, newData]) : setTriumphs(triumphs => [...triumphs, newData])
   }
 
   const onDeleteClick = (id, type) => {
@@ -50,8 +50,8 @@ function App() {
           return ogTarget.id === id ? null : ogTarget;
         }))
       } else{
-        setAccomplishments(ogAccomplishments => ogAccomplishments.filter(ogAccomplishment => {
-          return ogAccomplishment.id === id ? null : ogAccomplishment;
+        setTriumphs(ogTriumphs => ogTriumphs.filter(ogTriumphs => {
+          return ogTriumphs.id === id ? null : ogTriumphs;
         }))
       }
   }
@@ -67,8 +67,8 @@ function App() {
         <Route path="/targets">
           <Targets targets={targets} onUpdateTarget={onUpdateTarget} onDeleteClick={onDeleteClick}/>
         </Route>
-        <Route path="/accomplishments">
-          <Accomplishments accomplishments={accomplishments} onDeleteClick={onDeleteClick}/>
+        <Route path="/triumphs">
+          <Triumphs triumphs={triumphs} onDeleteClick={onDeleteClick}/>
         </Route>
       </Switch>
     </div>

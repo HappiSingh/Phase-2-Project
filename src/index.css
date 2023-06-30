@@ -48,7 +48,7 @@ h2 {
   color: #00D4FF;
 }
 
-#targets-container, #accomplishments-container {
+#targets-container, #triumphs-container {
   display: flex;
     flex-wrap: wrap;
     margin: 50px 25px;
@@ -63,7 +63,7 @@ h2 {
   padding: 10px 20px;
 }
 
-#accomplishments-container .card{
+#triumphs-container .card{
   background-color: #433d8c;
 }
 
@@ -88,7 +88,7 @@ h2 {
   background-color: #7A73FE;
 }
 
-#accomplishments-container .card .delete-button {
+#triumphs-container .card .delete-button {
   color: white;
   background-color: rgba(255, 255, 255, 0%);
 }

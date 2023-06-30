@@ -1,10 +1,10 @@
 import React from "react";
 
-function AccomplishmentItem({ accomplishment, onDeleteClick }) {
-    const {id, name, completed} = accomplishment;
+function TriumphItem({ triumph, onDeleteClick }) {
+    const {id, name, completed} = triumph;
 
     const handleDelete = () => {
-        let type = "accomplishments";
+        let type = "triumphs";
         onDeleteClick(id, type)
     }
 
@@ -17,4 +17,4 @@ function AccomplishmentItem({ accomplishment, onDeleteClick }) {
     );
 };
 
-export default AccomplishmentItem;
+export default TriumphItem;

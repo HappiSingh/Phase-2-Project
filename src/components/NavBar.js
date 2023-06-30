@@ -39,11 +39,11 @@ function NavBar() {
             >Targets</NavLink>
 
         <NavLink
-            to="/accomplishments"
+            to="/triumphs"
             exact
             style={linkStyles}
             activeStyle={activeStyle}
-            >Accomplishments</NavLink>
+            >Triumphs</NavLink>
         </div>
     );
 }

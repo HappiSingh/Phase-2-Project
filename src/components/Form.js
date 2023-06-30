@@ -6,7 +6,7 @@ function Form({ onFormSubmit }){
         name: "",
         progress: ""
     })
-    const [accomplishmentData, setAccomplishmentData] = useState({
+    const [triumphData, setTriumphData] = useState({
         name: "",
         completed: ""
     })
@@ -22,8 +22,8 @@ function Form({ onFormSubmit }){
                 [e.target.name]: e.target.value,
               })
         } else{
-            setAccomplishmentData({
-                ...accomplishmentData,
+            setTriumphData({
+                ...triumphData,
                 [e.target.name]: e.target.value,
               });
         };
@@ -34,7 +34,7 @@ function Form({ onFormSubmit }){
 
         let type;
         if(formType){ type = "targets"}
-            else{ type = "accomplishments"}
+            else{ type = "triumphs"}
 
         fetch(`http://localhost:4000/${type}`, {
             method: 'POST',
@@ -42,27 +42,27 @@ function Form({ onFormSubmit }){
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify(formType ? targetData : accomplishmentData)
+            body: JSON.stringify(formType ? targetData : triumphData)
             })
                 .then(res => res.json())
                 .then(newData => onFormSubmit(newData, type))
 
         formType ? 
         setTargetData({name: "", progress: ""}) : 
-        setAccomplishmentData({name: "", completed: ""})
+        setTriumphsData({name: "", completed: ""})
     };
 
 
     return(
         <section id="form-section">
-            <h2>Add a new target or an accomplishment:</h2>
+            <h2>Add a new target or a triumph:</h2>
             <form onSubmit={handleSubmit}>
                 <select 
                     name="form-type"
                     onChange={handleFormTypeChange}
                     >
                     <option value="target">Target</option>
-                    <option value="accomplishment">Accomplishment</option>
+                    <option value="triumph">Triumph</option>
                 </select>
                 <input 
                     onChange={handleChange}
@@ -70,7 +70,7 @@ function Form({ onFormSubmit }){
                     type="text"
                     placeholder="Description"
                     name="name"
-                    value={formType ? targetData.name : accomplishmentData.name}
+                    value={formType ? targetData.name : triumphData.name}
                     />
                 
                 { 
@@ -91,7 +91,7 @@ function Form({ onFormSubmit }){
                         type="text"
                         placeholder="Ex. May 2020"
                         name="completed"
-                        value={accomplishmentData.completed}
+                        value={triumphData.completed}
                         />
                     </label>
                 }
