@@ -28,15 +28,16 @@ function App() {
       .then(setTriumphs);
   }, []);
 
-  //
+  // handling updates to targets
   const onUpdateTarget = (updatedTarget) => {
     const updatedTargets = targets.map(originalTarget => {
-      if(originalTarget.id === updatedTarget.id){
+      if (originalTarget.id === updatedTarget.id) {
         return updatedTarget;
-      } else{
+      } else {
         return originalTarget;
       }
     });
+    // testing
     console.log(updatedTargets);
   }
 
@@ -48,37 +49,42 @@ function App() {
       : setTriumphs(triumphs => [...triumphs, newData])
   }
 
-  // deleting data from db is X is clicked 
+  // deleting data from db if X is clicked
   const onDeleteClick = (id, type) => {
     fetch(`http://localhost:4000/${type}/${id}`, {
       method: 'DELETE'
     })
       if(type === 'targets'){
         setTargets(orgTargets => orgTargets.filter(orgTarget => {
-          return orgTarget.id === id ? null : orgTarget;
+          return orgTarget.id === id
+          ? null 
+          : orgTarget;
         }))
       } else{
-        setTriumphs(orgTriumphs => orgTriumphs.filter(orgTriumphs => {
-          return orgTriumphs.id === id ? null : orgTriumphs;
+        setTriumphs(orgTriumphs => orgTriumphs.filter(orgTriumph => {
+          return orgTriumph.id === id 
+          ? null 
+          : orgTriumph;
         }))
       }
   }
 
+  // placing components and routes and passing down props
   return (
     <div>
       <NavBar />
       <Form onFormSubmit={onFormSubmit}/>
-      <Switch>
-      <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/targets">
-          <Targets targets={targets} onUpdateTarget={onUpdateTarget} onDeleteClick={onDeleteClick}/>
-        </Route>
-        <Route path="/triumphs">
-          <Triumphs triumphs={triumphs} onDeleteClick={onDeleteClick}/>
-        </Route>
-      </Switch>
+        <Switch>
+          <Route exact path="/">
+              <Home />
+          </Route>
+          <Route path="/targets">
+              <Targets targets={targets} onUpdateTarget={onUpdateTarget} onDeleteClick={onDeleteClick}/>
+          </Route>
+          <Route path="/triumphs">
+              <Triumphs triumphs={triumphs} onDeleteClick={onDeleteClick}/>
+          </Route>
+        </Switch>
     </div>
   );
 }
