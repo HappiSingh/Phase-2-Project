@@ -1,10 +1,53 @@
 # Targets and Triumphs
 
 ## Description
-Welcome to my Targets and Triumphs React App. Here, you can view targets that I have set for myself and am currently working towards. You can also view my triumphs or achievements that I am most proud of. There's also a form to add a new target or triumph to the list. The target can also be updated with the slider and both targets and triumphs have a X in the topp left corner to delete them. This project let's you set targets for yourself, update their progress, and view your triumphs over the years. 
+Welcome to my Targets and Triumphs React App. Here, you can view the targets that have been set and their progress. You can also view the triumphs or achievements that we want to share. The targets are to help keep the mind focused and on-track, while the triumphs remind us of our achievements and encourage us to persevere during hardships. You'll also find a form for adding a new target or triumph to the list. The progress on the targets can also be adjusted and each card can also be deleted should you choose. 
 
 ## Features
-Here you will see the cards that we already have in possession rendered on page load. You can view the name, image of the card, it's abilities/description, and view the attack and defense points of the card. You can also fill out a form and submit a new card to the collection. Once you fill the data and click the "Add Card" button, your new card will show on the bottom. This will also get saved to the db.json file and retain the info on page refresh. You also have the option to remove the card from your collection if you no longer possess it by clicking the "Remove" button on the card. Let's grow the collection over time!  
+This project is a 
+- Single page application (SPA) with only one "index.html" file created with React.
+- Contains 7 components
+- A nav bar element using 3 client-side routes with React Router.
+- A json-server containing the data that acts as our backend.
+
+## Installation 
+```
+npm install
+```
+**Start**: json server
+```
+ npm run server 
+```
+**Start**: React App
+```
+ npm start
+```
+
+## Usage
+You start out on the homepage. Here you are greeted with a message and some information. The next tab is Targets. Here, you will see all the targets already set in place that are fetched from the backend. You can use the slider to adjust the progress of each target card and/or you can click the X in the top left to delete the card. The Triumphs tab will show the triumphs already set in place from the backend as well. There's a form element on the top where you can select Target or Triumph from a dropdown, enter the description, and either choose a percentage or date based off the type of dropdown element select. Once you hit submit, you will see a new card show on the respected tab.
+
+## License
+MIT License
+
+Copyright (c) 2023 Harpreet Singh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 
 
 
 
