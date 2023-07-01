@@ -106,7 +106,7 @@ function Form({ onFormSubmit }){
                         />
                     </label>
                 }
-                <button type="submit">Add</button>
+                <button className="add-btn" type="submit">Submit</button>
             </form>
         </section>
     );

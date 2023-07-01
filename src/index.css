@@ -1,16 +1,8 @@
-/* Color Theme Swatches in Hex */
-.color-theme_Screen-Shot-2022-08-20-at-12-1-hex { color: #0A2540; }
-.color-theme_Screen-Shot-2022-08-20-at-12-2-hex { color: #0D2E4E; }
-.color-theme_Screen-Shot-2022-08-20-at-12-3-hex { color: #7A73FE; }
-.color-theme_Screen-Shot-2022-08-20-at-12-4-hex { color: #00D4FF; }
-.color-theme_Screen-Shot-2022-08-20-at-12-5-hex { color: #ADBDCC; }
-
 
 body {
-  background-color: #0D2E4E;
-  color: white;
+  background-color: #CFDAC8;
+  color: #000000;
   margin: 0;
-  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -23,54 +15,63 @@ code {
     monospace;
 }
 
+/* sentence above the form */
 h2 {
   font-size: 1.25rem;
   font-weight: normal;
   opacity: 70%;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 42pt;
+  text-align: center;
+  color: white;
 }
 
 #nav-bar {
-  background-color: #0A2540;
-  padding: 25px 0px 40px 50px;
-  align-items: center;
+  background-color: #7C9473;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  text-align: center;
 }
 
+/* home page written info */
 #home-container {
-  margin: 80px 50px;
+  margin: 50px 50px;
   padding: 20px;
   text-align: center;
 }
 
 #home-container p {
-  opacity: 75%;
+  opacity: 85%;
+  font-size: large;
 }
 
+/* footer copyright */
 #home-container #footer{
   font-weight: bold;
-  color: #00D4FF;
+  color: #000304;
 }
 
 #targets-container, #triumphs-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 50px 25px;
-    /* max-width: 75%; */
+    margin: 25px 25px;
     justify-content: center;
+    
 }
 
 .card {
   margin: 10px;
-  width: 400px;
-  border-radius: 10px;
-  padding: 10px 20px;
+  width: 350px;
+  border-radius: 30px;
+  padding: 10px 15px;
+  color: #ffffff;
 }
 
-#triumphs-container .card{
-  background-color: #433d8c;
-}
-
-#targets-container .card {
-  background-color: #0A2540;
+#triumphs-container .card, #targets-container .card{
+  background-color: #17594A;
 }
 
 .card .delete-button {
@@ -86,11 +87,7 @@ h2 {
   align-content: flex-end;
 }
 
-#targets-container .card .delete-button {
-  background-color: #4ff23a;
-}
-
-#triumphs-container .card .delete-button {
+#targets-container .card .delete-button, #triumphs-container .card .delete-button {
   color: white;
   background-color: rgba(255, 255, 255, 0%);
 }
@@ -102,7 +99,7 @@ h2 {
 }
 
 .card p .label {
-  color: #adbdcc81;
+  color: #31ea7e81;
 }
 
 .card .progress-slider {
@@ -110,13 +107,21 @@ h2 {
 }
 
 #form-section {
-  margin-left: 50px;
+  text-align: center;
 }
 
 form input, select, button {
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  border: solid #4ff23a 2px;
+}
+
+.add-btn {
+  color: black;
+  font-weight: bold;
+  background-color: #4ff23a;
+  border: solid black 2px;
+  opacity: 60%;
 }
 
 form select{
@@ -125,20 +130,9 @@ form select{
 }
 
 form input{
-  margin: 15px 15px 0px 5px;
-}
-
-form button {
-  font-weight: bold;
-  opacity: 50%;
-  background-color: white;
-  border: none;
+  margin: 0px 15px 0px 5px;
 }
 
 form .description{
-  width: 20%;
+  width: 25%;
 }
-
-
-
-

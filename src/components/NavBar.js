@@ -4,19 +4,20 @@ import { NavLink } from "react-router-dom";
 function NavBar() {
 
   // The look of the nav-bar buttons
-  const linkStyles = {
-    color: "#00D4FF",
-    padding: "10px 20px",
-    marginRight: "20px",
-    background: "#0D2E4E",
-    textDecoration: "inherit", /* no underline */
-    borderRadius: "10px"
+  const navLinkStyles = {
+    color: "#000000",
+    padding: "15px 15px",
+    marginRight: "50px",
+    background: "#CFDAC8",
+    textDecoration: "inherit",
+    borderRadius: "25px"
   };
 
   // The animation of the nav-bar buttons
   const activeStyle = {
-    border: "solid #00D4FF 2px",
-    fontWeight: "bold"
+    border: "solid #00FF00 2px",
+    fontWeight: "bold",
+    textDecoration: "underline"
   };
 
   // routing to the different component pages
@@ -29,7 +30,7 @@ function NavBar() {
         <NavLink
             to="/"
             exact
-            style={linkStyles}
+            style={navLinkStyles}
             activeStyle={activeStyle}
         >
           Home
@@ -37,7 +38,7 @@ function NavBar() {
         <NavLink
             to="/targets"
             exact
-            style={linkStyles}
+            style={navLinkStyles}
             activeStyle={activeStyle}
         >
           Targets
@@ -46,7 +47,7 @@ function NavBar() {
         <NavLink
             to="/triumphs"
             exact
-            style={linkStyles}
+            style={navLinkStyles}
             activeStyle={activeStyle}
         >
           Triumphs
