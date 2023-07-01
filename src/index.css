@@ -15,7 +15,6 @@ code {
     monospace;
 }
 
-/* sentence above the form */
 h2 {
   font-size: 1.25rem;
   font-weight: normal;
@@ -31,12 +30,11 @@ h2 {
 
 #nav-bar {
   background-color: #7C9473;
-  padding-top: 10px;
-  padding-bottom: 25px;
+  padding-top: 5px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
-/* home page written info */
 #home-container {
   margin: 50px 50px;
   padding: 20px;
@@ -48,7 +46,6 @@ h2 {
   font-size: large;
 }
 
-/* footer copyright */
 #home-container #footer{
   font-weight: bold;
   color: #000304;
@@ -59,7 +56,6 @@ h2 {
     flex-wrap: wrap;
     margin: 25px 25px;
     justify-content: center;
-    
 }
 
 .card {
