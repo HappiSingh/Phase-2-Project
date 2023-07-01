@@ -1,3 +1,14 @@
+# Targets and Triumphs
+
+## Description
+Welcome to my Targets and Triumphs React App. Here, you can view targets that I have set for myself and am currently working towards. You can also view my triumphs or achievements that I am most proud of. There's also a form to add a new target or triumph to the list. The target can also be updated with the slider and both targets and triumphs have a X in the topp left corner to delete them. This project let's you set targets for yourself, update their progress, and view your triumphs over the years. 
+
+## Features
+Here you will see the cards that we already have in possession rendered on page load. You can view the name, image of the card, it's abilities/description, and view the attack and defense points of the card. You can also fill out a form and submit a new card to the collection. Once you fill the data and click the "Add Card" button, your new card will show on the bottom. This will also get saved to the db.json file and retain the info on page refresh. You also have the option to remove the card from your collection if you no longer possess it by clicking the "Remove" button on the card. Let's grow the collection over time!  
+
+
+
+---
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
