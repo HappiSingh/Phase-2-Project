@@ -17,7 +17,7 @@ function TriumphItem({ triumph, onDeleteClick }) {
                 ✕
             </button>
             <p><b className="label">Triumph: </b>{name}</p>
-            <p><b className="label">Completed on: {completed}</b></p>
+            <p><b className="label">Achieved {completed}</b></p>
         </div>
     );
 };

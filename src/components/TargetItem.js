@@ -35,7 +35,7 @@ function TargetItem({ target, onUpdateTarget, onDeleteClick }) {
                  ✕ 
             </button>
             <p><b className="label">Target: </b> {name}</p>
-            <p><b className="label">Progress: </b> {progressBar} %</p>
+            <p><b className="label">Progress: </b> {progressBar}%</p>
             {/* slider from 0-100, moving by ten */}
             <input onChange={handleChange} className="progress-slider" type="range" min="0" max="100" value={progressBar} step="10" id="myRange" name={progress}/>
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
 function Home(){
-
+    // home page - a little introduction to my project
     return(
         <div id="home-container">
             <h3>Welcome to my Phase 2 Project</h3>
