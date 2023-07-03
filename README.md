@@ -19,7 +19,7 @@ npm install
 ```
 **Start**: json server
 ```
- npm run server 
+ npm run dev 
 ```
 **Start**: React App
 ```
